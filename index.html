@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camilly Videomaker</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+   
+</head>
+
+<body>
+    <div id="preloader" aria-hidden="true">
+        <div class="preloader-brand">
+            <span class="preloader-line"></span>
+            <h2>Camilly</h2>
+            <p>videomaker</p>
+        </div>
+    </div>
+
+    <div class="grain" aria-hidden="true"></div>
+
+    <header id="header">
+        <div class="container header-inner">
+            <a href="#inicio" class="logo" aria-label="Ir para o início">
+                <span>Camilly</span>
+                <small>Videomaker</small>
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Navegação principal">
+                <a href="#servicos">Serviços</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#contato" class="nav-btn">Contato</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="nav" type="button">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <canvas class="hero-particles" id="heroParticles"></canvas>
+
+            <div class="hero-bg-glow hero-glow-1"></div>
+            <div class="hero-bg-glow hero-glow-2"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+                <p class="hero-kicker">Cobertura de eventos e vídeos corporativos</p>
+
+                <h1>
+                    Histórias que não só aparecem na tela.
+                    <span>Elas ficam.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Vídeos modernos, elegantes e emocionantes para registrar momentos únicos,
+                    transmitir presença e transformar memória em algo vivo.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contato" class="btn btn-primary">Solicitar orçamento</a>
+                    <a href="#portfolio" class="btn btn-secondary">Ver portfólio</a>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="intro-strip" aria-label="Tipos de serviço">
+            <div class="intro-track">
+                <span>Casamentos</span>
+                <span>Aniversários</span>
+                <span>Batizados</span>
+                <span>Formaturas</span>
+                <span>Eventos Corporativos</span>
+                <span>Trends</span>
+                <span>Institucionais</span>
+                <span>Casamentos</span>
+                <span>Aniversários</span>
+                <span>Batizados</span>
+                <span>Formaturas</span>
+                <span>Eventos Corporativos</span>
+            </div>
+        </section>
+
+        <section class="section" id="servicos">
+            <div class="container">
+                <div class="section-heading reveal-section">
+                    <p class="section-tag">Serviços</p>
+                    <h2>Vídeos com emoção, estética e presença profissional</h2>
+                    <p>
+                        A cobertura de eventos é o foco principal, mas o trabalho também inclui
+                        produções criativas para marcas, empresas e presença digital.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card reveal-card">
+                        <span>01</span>
+                        <h3>Casamentos</h3>
+                        <p>Registros delicados, modernos e emocionantes para eternizar cada detalhe do grande dia.</p>
+                    </article>
+
+                    <article class="service-card reveal-card">
+                        <span>02</span>
+                        <h3>Aniversários</h3>
+                        <p>Vídeos leves e dinâmicos que captam a energia, os sorrisos e a atmosfera da comemoração.</p>
+                    </article>
+
+                    <article class="service-card reveal-card">
+                        <span>03</span>
+                        <h3>Batizados</h3>
+                        <p>Produções sensíveis e elegantes para transformar momentos especiais em memória viva.</p>
+                    </article>
+
+                    <article class="service-card reveal-card">
+                        <span>04</span>
+                        <h3>Formaturas</h3>
+                        <p>Uma cobertura moderna para registrar conquista, emoção, orgulho e celebração.</p>
+                    </article>
+
+                    <article class="service-card reveal-card">
+                        <span>05</span>
+                        <h3>Eventos corporativos</h3>
+                        <p>Conteúdo profissional para fortalecer imagem, presença e autoridade de empresas e marcas.</p>
+                    </article>
+
+                    <article class="service-card reveal-card">
+                        <span>06</span>
+                        <h3>Vídeos para marcas</h3>
+                        <p>Trends, institucionais e materiais criativos pensados para gerar impacto e conexão real.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="portfolio">
+            <div class="container">
+                <div class="section-heading reveal-section">
+                    <p class="section-tag">Portfólio</p>
+                    <h2>Um olhar que transforma momentos em cena</h2>
+
+                </div>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-card reveal-card" data-video="videos/casamento.mp4">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="videos/casamento.mp4" type="video/mp4" />
+                        </video>
+                        <div class="portfolio-info">
+                            <p>Casamento</p>
+                            <h3>Momento, detalhe e emoção</h3>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-card reveal-card" data-video="videos/aniversario_15.mp4">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="videos/aniversario_15.mp4" type="video/mp4" />
+                        </video>
+                        <div class="portfolio-info">
+                            <p>Aniversário</p>
+                            <h3>Leveza, energia e lembrança</h3>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-card reveal-card" data-video="videos/formatura.mp4">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="videos/formatura.mp4" type="video/mp4" />
+                        </video>
+                        <div class="portfolio-info">
+                            <p>Formatura</p>
+                            <h3>Conquista registrada com presença</h3>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-card reveal-card" data-video="videos/makingof_casamento.MOV">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="videos/makingof_casamento.MOV" type="video/mp4" />
+                        </video>
+                        <div class="portfolio-info">
+                            <p>Making Of</p>
+                            <h3>Vídeos profissionais com impacto</h3>
+                        </div>
+                    </article>
+                    <article class="portfolio-card reveal-card" data-video="videos/video4.mp4">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="videos/video4.mp4" type="video/mp4" />
+                        </video>
+                        <div class="portfolio-info">
+                            <p>Casamento</p>
+                            <h3>Amor em cena, detalhe por detalhe</h3>
+                        </div>
+                    </article>
+                    <article class="portfolio-card reveal-card" data-video="videos/video5.mp4">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="videos/video5.mp4" type="video/mp4" />
+                        </video>
+                        <div class="portfolio-info">
+                            <p>Casamento</p>
+                            <h3>Luz, promessa e memória</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="sobre">
+            <div class="container about-grid">
+                <div class="about-visual reveal-left">
+                    <div class="about-photo-card one"></div>
+                    <div class="about-photo-card two"></div>
+
+                    <div class="about-main-art">
+                        <canvas class="about-particles"></canvas>
+                        <div class="about-art-bg"></div>
+
+                        <svg class="about-camera-icon" viewBox="0 0 220 220" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="48" y="72" width="92" height="76" rx="18" stroke="currentColor" stroke-width="4" />
+                            <path d="M145 95L177 77C183 73 190 77 190 84V136C190 143 183 147 177 143L145 125"
+                                stroke="currentColor" stroke-width="4" stroke-linejoin="round" />
+                            <path d="M92 96L122 110L92 124V96Z" stroke="currentColor" stroke-width="4"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                        <div class="about-floating-dot dot-1"></div>
+                        <div class="about-floating-dot dot-2"></div>
+                        <div class="about-floating-dot dot-3"></div>
+
+                        <div class="about-wave one"></div>
+                        <div class="about-wave two"></div>
+                    </div>
+                </div>
+
+                <div class="about-text reveal-right">
+                    <p class="section-tag">Sobre mim</p>
+                    <h2>Vídeo é história, sentimento e memória</h2>
+
+                    <p>
+                        Meu nome é Camilly, sou videomaker mobile, e meu trabalho vai muito além de apenas gravar.
+                        Eu amo registrar momentos que passam rápido, mas que merecem ser lembrados pra sempre.
+                    </p>
+
+                    <p>
+                        Meu objetivo é transformar cada detalhe em um vídeo que emociona, que transmite a energia
+                        do dia e faz você reviver tudo como se estivesse lá de novo.
+                    </p>
+
+                    <p>
+                        Cada entrega é pensada com cuidado: desde os pequenos gestos, olhares e sorrisos, até os
+                        momentos mais marcantes. Tudo para criar um material bonito, moderno e com identidade,
+                        daquele tipo que você assiste e sente orgulho de ter vivido.
+                    </p>
+
+                    <p>
+                        Eu acredito que um bom vídeo não é só imagem. É história, é sentimento, é memória.
+                        E além disso, também produzo vídeos para marcas e empresas, com um olhar criativo e
+                        profissional, sempre buscando transmitir verdade e impacto.
+                    </p>
+
+                    <p>
+                        Se você quer um vídeo com emoção, qualidade e presença profissional, pode contar comigo.
+                    </p>
+
+                    <div class="about-info">
+                        <a href="https://www.instagram.com/camilly_videomaker/" target="_blank" rel="noreferrer">
+                            @camilly_videomaker
+                        </a>
+                        <span>+55 38 99870-9503</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="depoimentos">
+            <div class="container">
+                <div class="section-heading reveal-section">
+                    <p class="section-tag">Depoimentos</p>
+                    <h2>Feedbacks que viram confiança</h2>
+
+                </div>
+
+                <div class="feedback-carousel-wrapper reveal-section">
+                    <button class="feedback-arrow prev" id="feedbackPrev" aria-label="Voltar" type="button">‹</button>
+
+                    <div class="feedback-carousel" id="feedbackCarousel">
+                        <div class="feedback-track" id="feedbackTrack">
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print_pt1.jpeg" alt="Feedback 1" /></div>
+                            </div>
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print7.jpeg" alt="Feedback 7" /></div>
+                            </div>
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print6.jpeg" alt="Feedback 6" /></div>
+                            </div>
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print1.jpeg" alt="Feedback 1" /></div>
+                            </div>
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print_pt2.jpeg" alt="Feedback 7" /></div>
+                            </div>
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print2.jpeg" alt="Feedback 4" /></div>
+                            </div>
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print5.jpeg" alt="Feedback 5" /></div>
+                            </div>
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print_pt3.jpeg" alt="Feedback 5" /></div>
+                            </div>
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print4.jpeg" alt="Feedback 3" /></div>
+                            </div>
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print3.jpeg" alt="Feedback 2" /></div>
+                            </div>
+                            <div class="feedback-slide">
+                                <div class="feedback-card"><img src="assets/print8.jpeg" alt="Feedback 8" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="feedback-arrow next" id="feedbackNext" aria-label="Avançar" type="button">›</button>
+                </div>
+
+                <div class="feedback-dots" id="feedbackDots"></div>
+            </div>
+        </section>
+
+        <section class="section" id="contato">
+            <div class="container">
+                <div class="section-heading reveal-section">
+                    <p class="section-tag">Contato</p>
+                    <h2>Me conta um pouco sobre o seu projeto</h2>
+
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card reveal-left">
+                        <p class="section-tag">Camilly Videomaker</p>
+                        <h3>Vídeos com emoção, elegância e presença</h3>
+                        <p>
+                            Cobertura de eventos, vídeos institucionais, trends e conteúdos para marcas,
+                            sempre com um olhar moderno, sensível e profissional.
+                        </p>
+
+                        <div class="contact-points">
+                            <span>Casamentos</span>
+                            <span>Aniversários</span>
+                            <span>Batizados</span>
+                            <span>Formaturas</span>
+                            <span>Eventos corporativos</span>
+                            <span>Vídeos institucionais</span>
+                            <span>Trends</span>
+                        </div>
+
+                        <div class="contact-links">
+                            <a href="https://www.instagram.com/camilly_videomaker/" target="_blank" rel="noreferrer">
+                                @camilly_videomaker
+                            </a>
+                            <span>+55 38 99870-9503</span>
+                        </div>
+                    </div>
+
+                    <form id="whatsappForm" class="contact-form reveal-right">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Seu nome</label>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone">Seu telefone</label>
+                                <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000"
+                                    required />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+                                <label for="tipo-hidden">Tipo de serviço</label>
+
+                                <div class="custom-select" id="customSelectTipo">
+                                    <button type="button" class="custom-select-trigger">
+                                        <span class="custom-select-text">Selecione</span>
+                                        <span class="custom-select-icon"></span>
+                                    </button>
+
+                                    <div class="custom-select-dropdown">
+                                        <button type="button" class="custom-option selected"
+                                            data-value="">Selecione</button>
+                                        <button type="button" class="custom-option"
+                                            data-value="Casamento">Casamento</button>
+                                        <button type="button" class="custom-option"
+                                            data-value="Aniversário">Aniversário</button>
+                                        <button type="button" class="custom-option"
+                                            data-value="Batizado">Batizado</button>
+                                        <button type="button" class="custom-option"
+                                            data-value="Formatura">Formatura</button>
+                                        <button type="button" class="custom-option"
+                                            data-value="Evento corporativo">Evento corporativo</button>
+                                        <button type="button" class="custom-option"
+                                            data-value="Vídeo institucional">Vídeo institucional</button>
+                                        <button type="button" class="custom-option" data-value="Trend">Trend</button>
+                                        <button type="button" class="custom-option" data-value="Outro">Outro</button>
+                                    </div>
+
+                                    <input type="hidden" name="tipo" id="tipo-hidden" required />
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="campo-casamento">
+                                <label for="noivos">Nome dos noivos</label>
+                                <input type="text" id="noivos" name="noivos" placeholder="Ex: Ana & João" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dataEvento">Data do evento ou gravação</label>
+                                <input type="text" id="dataEvento" name="dataEvento" placeholder="Ex: 18/09/2026" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Mais detalhes</label>
+                            <textarea id="mensagem" name="mensagem" rows="6"
+                                placeholder="Me conte um pouco sobre o que você precisa..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit">
+                            Enviar pelo WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="video-modal" id="videoModal" aria-hidden="true">
+        <div class="video-modal-backdrop"></div>
+        <div class="video-modal-content">
+            <button class="close-modal" id="closeModal" type="button" aria-label="Fechar vídeo">×</button>
+            <video id="modalVideo" controls autoplay></video>
+        </div>
+    </div>
+</body>
+ <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script defer src="script.js"></script>
+</html>
