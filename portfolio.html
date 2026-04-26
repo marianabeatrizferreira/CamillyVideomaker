@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Camilly Videomaker</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+
+<body>
+    <header id="header">
+        <div class="container header-inner">
+            <a href="#inicio" class="logo" aria-label="Ir para o início">
+                <span>Camilly</span>
+                <small>Videomaker</small>
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Navegação principal">
+                <a href="index.html">Serviços</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="index.html">Sobre</a>
+                <a href="index.html">Depoimentos</a>
+                <a href="index.html" class="nav-btn">Contato</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="nav" type="button">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <section class="portfolio-section" id="portfolio">
+
+        <div class="portfolio-container">
+
+            <div class="portfolio-header">
+                <span>PORTFÓLIO</span>
+
+                <h2>
+                    Histórias reais transformadas em cena
+                </h2>
+
+                <p>
+                    Filmes para casamentos, eventos e memórias que merecem ser sentidas de novo.
+                </p>
+            </div>
+
+
+            <div class="portfolio-grid">
+
+                <!-- CARD -->
+                <article class="portfolio-card featured" data-video="videos/casamento.mp4">
+
+                    <video muted loop playsinline preload="metadata">
+                        <source src="videos/casamento.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="portfolio-overlay">
+                        <span>Casamento</span>
+                        <h3>Momento, detalhe e emoção</h3>
+                        <p>Registros com linguagem cinematográfica.</p>
+                    </div>
+
+                </article>
+
+
+                <article class="portfolio-card" data-video="videos/aniversario_15.mp4">
+
+                    <video muted loop playsinline preload="metadata">
+                        <source src="videos/aniversario_15.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="portfolio-overlay">
+                        <span>Making Of Noiva</span>
+                        <h3>Leveza e lembrança</h3>
+                        <p>Os bastidores do inesquecível.</p>
+                    </div>
+
+                </article>
+
+
+                <article class="portfolio-card" data-video="videos/video5.mp4">
+
+                    <video muted loop playsinline preload="metadata">
+                        <source src="videos/video5.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="portfolio-overlay">
+                        <span>Casamento</span>
+                        <h3>Luz e promessa</h3>
+                        <p>Cenas com presença e poesia.</p>
+                    </div>
+
+                </article>
+
+
+                <article class="portfolio-card wide" data-video="videos/makingof_casamento.MOV">
+
+                    <video muted loop playsinline preload="metadata">
+                        <source src="videos/makingof_casamento.MOV" type="video/mp4">
+                    </video>
+
+                    <div class="portfolio-overlay">
+                        <span>Making Of Noivo</span>
+                        <h3>Estilo e impacto</h3>
+                        <p>Filmes que respiram elegância.</p>
+                    </div>
+
+                </article>
+
+
+                <article class="portfolio-card" data-video="videos/video4.mp4">
+                    <video muted loop playsinline preload="metadata">
+                        <source src="videos/video4.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="portfolio-overlay">
+                        <span>Casamento</span>
+                        <h3>Amor em cena</h3>
+                        <p>Cada gesto no tempo certo.</p>
+                    </div>
+                </article>
+
+
+                <article class="portfolio-card" data-video="videos/formatura.mp4">
+                    <video muted loop playsinline preload="metadata">
+                        <source src="videos/formatura.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="portfolio-overlay">
+                        <span>Formatura</span>
+                        <h3>Conquista registrada</h3>
+                        <p>Fechamentos com cara de começo.</p>
+                    </div>
+                </article>
+
+
+                <article class="portfolio-card" data-video="videos/aniversario-infantil.mp4">
+                    <video muted loop playsinline preload="metadata">
+                        <source src="videos/aniversario-infantil.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="portfolio-overlay">
+                        <span>Aniversário</span>
+                        <h3>Memórias vivas</h3>
+                        <p>Cor, espontaneidade e afeto.</p>
+                    </div>
+                </article>
+
+
+                <article class="portfolio-card" data-video="videos/batizado.mp4">
+                    <video muted loop playsinline preload="metadata">
+                        <source src="videos/batizado.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="portfolio-overlay">
+                        <span>Batizado</span>
+                        <h3>Fé e delicadeza</h3>
+                        <p>Um registro suave e especial.</p>
+                    </div>
+                </article>
+                <article class="portfolio-card" data-video="videos/barbearia.mp4">
+                    <video muted loop playsinline preload="metadata">
+                        <source src="videos/barbearia.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="portfolio-overlay">
+                        <span>institucional</span>
+                        <h3>Precisão e identidade</h3>
+                        <p>Produção visual para marcas com presença.</p>
+                    </div>
+                </article>
+                <article class="portfolio-card" data-video="videos/confraternização.MOV">
+                    <video muted loop playsinline preload="metadata">
+                        <source src="videos/confraternização.MOV" type="video/mp4">
+                    </video>
+
+                    <div class="portfolio-overlay">
+                        <span>Corporativo</span>
+                        <h3>Encontros que ficam</h3>
+                        <p>Um filme para reviver encontros marcantes.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+
+        <!-- MODAL -->
+        <div class="video-modal" id="videoModal">
+
+            <button class="close-video">
+                ✕
+            </button>
+
+            <div class="video-modal-content">
+                <video id="modalVideo" controls playsinline></video>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+<script src="script.js"></script>
+
+</html>

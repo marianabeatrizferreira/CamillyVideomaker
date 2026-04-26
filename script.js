@@ -204,25 +204,27 @@ document.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(animateHeroParticles);
     }
 
-    heroSection.addEventListener("mousemove", (event) => {
-      const rect = heroCanvas.getBoundingClientRect();
-      mouse.x = event.clientX - rect.left;
-      mouse.y = event.clientY - rect.top;
-    });
+    if (heroSection) {
+      heroSection.addEventListener("mousemove", (event) => {
+        const rect = heroCanvas.getBoundingClientRect();
+        mouse.x = event.clientX - rect.left;
+        mouse.y = event.clientY - rect.top;
+      });
 
-    heroSection.addEventListener("mouseleave", () => {
-      mouse.x = null;
-      mouse.y = null;
-    });
+      heroSection.addEventListener("mouseleave", () => {
+        mouse.x = null;
+        mouse.y = null;
+      });
 
-    window.addEventListener("resize", () => {
+      window.addEventListener("resize", () => {
+        resizeHeroCanvas();
+        createHeroParticles();
+      });
+
       resizeHeroCanvas();
       createHeroParticles();
-    });
-
-    resizeHeroCanvas();
-    createHeroParticles();
-    animateHeroParticles();
+      animateHeroParticles();
+    }
   }
 
   const aboutCanvas = document.querySelector(".about-particles");
@@ -314,86 +316,92 @@ document.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(animateAboutParticles);
     }
 
-    artBox.addEventListener("mousemove", (e) => {
-      const rect = artBox.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    });
+    if (artBox) {
+      artBox.addEventListener("mousemove", (e) => {
+        const rect = artBox.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+      });
 
-    artBox.addEventListener("mouseleave", () => {
-      mouse.x = null;
-      mouse.y = null;
-    });
+      artBox.addEventListener("mouseleave", () => {
+        mouse.x = null;
+        mouse.y = null;
+      });
 
-    window.addEventListener("resize", () => {
+      window.addEventListener("resize", () => {
+        resizeAboutCanvas();
+        createAboutParticles();
+      });
+
       resizeAboutCanvas();
       createAboutParticles();
-    });
-
-    resizeAboutCanvas();
-    createAboutParticles();
-    animateAboutParticles();
+      animateAboutParticles();
+    }
   }
 
-  document.querySelectorAll(".portfolio-card").forEach((card) => {
-    const video = card.querySelector("video");
+  /* =========================
+     PORTFÓLIO
+  ========================= */
 
-    if (!video) return;
-
-    card.addEventListener("mouseenter", () => {
-      video.play().catch(() => { });
-    });
-
-    card.addEventListener("mouseleave", () => {
-      video.pause();
-      video.currentTime = 0;
-    });
-  });
-
+  const portfolioCards = document.querySelectorAll(".portfolio-card");
   const videoModal = document.getElementById("videoModal");
   const modalVideo = document.getElementById("modalVideo");
-  const closeModal = document.getElementById("closeModal");
-  const backdrop = document.querySelector(".video-modal-backdrop");
+  const closeVideoBtn = document.querySelector(".close-video");
+
+  function openVideoModal(videoSrc) {
+    if (!videoModal || !modalVideo || !videoSrc) return;
+
+    modalVideo.src = videoSrc;
+    modalVideo.load();
+
+    videoModal.classList.add("active");
+    videoModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    modalVideo.play().catch(() => {});
+  }
 
   function closeVideoModal() {
     if (!videoModal || !modalVideo) return;
+
     videoModal.classList.remove("active");
     videoModal.setAttribute("aria-hidden", "true");
+
     modalVideo.pause();
-    modalVideo.src = "";
+    modalVideo.removeAttribute("src");
+    modalVideo.load();
+
     document.body.style.overflow = "";
   }
 
-  document.querySelectorAll(".portfolio-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      const videoSrc = card.getAttribute("data-video");
-      if (!videoModal || !modalVideo || !videoSrc) return;
+  portfolioCards.forEach((card) => {
+    const previewVideo = card.querySelector("video");
 
-      modalVideo.src = videoSrc;
-      videoModal.classList.add("active");
-      videoModal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-      modalVideo.play().catch(() => { });
-    });
-  });
+    if (previewVideo) {
+      card.addEventListener("mouseenter", () => {
+        previewVideo.play().catch(() => {});
+      });
 
-  if (closeModal) closeModal.addEventListener("click", closeVideoModal);
-  if (backdrop) backdrop.addEventListener("click", closeVideoModal);
-
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      closeVideoModal();
-
-      if (nav && nav.classList.contains("active")) {
-        nav.classList.remove("active");
-        document.body.classList.remove("menu-open");
-        if (menuToggle) menuToggle.setAttribute("aria-expanded", "false");
-      }
+      card.addEventListener("mouseleave", () => {
+        previewVideo.pause();
+        previewVideo.currentTime = 0;
+      });
     }
-  });
 
-  if (hasGSAP) {
-    document.querySelectorAll(".portfolio-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const videoSrc =
+        card.dataset.video ||
+        previewVideo?.querySelector("source")?.getAttribute("src") ||
+        previewVideo?.getAttribute("src");
+
+      if (previewVideo) {
+        previewVideo.pause();
+      }
+
+      openVideoModal(videoSrc);
+    });
+
+    if (hasGSAP) {
       card.addEventListener("mousemove", (e) => {
         if (window.innerWidth <= 900) return;
 
@@ -401,8 +409,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-        const rotateY = ((x / rect.width) - 0.5) * 8;
-        const rotateX = ((y / rect.height) - 0.5) * -8;
+        const rotateY = (x / rect.width - 0.5) * 8;
+        const rotateX = (y / rect.height - 0.5) * -8;
 
         gsap.to(card, {
           rotateX,
@@ -421,8 +429,39 @@ document.addEventListener("DOMContentLoaded", () => {
           ease: "power3.out"
         });
       });
+    }
+  });
+
+  if (closeVideoBtn) {
+    closeVideoBtn.addEventListener("click", closeVideoModal);
+  }
+
+  if (videoModal) {
+    videoModal.addEventListener("click", (e) => {
+      if (e.target === videoModal) {
+        closeVideoModal();
+      }
     });
   }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeVideoModal();
+
+      if (nav && nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        document.body.classList.remove("menu-open");
+
+        if (menuToggle) {
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      }
+    }
+  });
+
+  /* =========================
+     FORMULÁRIO WHATSAPP
+  ========================= */
 
   const whatsappForm = document.getElementById("whatsappForm");
 
@@ -436,7 +475,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (customSelect && tipoHidden && customSelectText && customOptions.length) {
     const trigger = customSelect.querySelector(".custom-select-trigger");
-    const dropdown = customSelect.querySelector(".custom-select-dropdown");
 
     trigger?.addEventListener("click", () => {
       customSelect.classList.toggle("active");
@@ -520,9 +558,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const blocoNoivos =
-        tipo === "Casamento"
-          ? `*Nome dos noivos:* ${noivos}\n`
-          : "";
+        tipo === "Casamento" ? `*Nome dos noivos:* ${noivos}\n` : "";
 
       const texto =
         `Olá, Camilly! Vim pelo site e gostaria de solicitar um orçamento.\n\n` +
@@ -541,6 +577,10 @@ document.addEventListener("DOMContentLoaded", () => {
       window.open(url, "_blank");
     });
   }
+
+  /* =========================
+     FEEDBACK CAROUSEL
+  ========================= */
 
   const feedbackTrack = document.getElementById("feedbackTrack");
   const feedbackPrev = document.getElementById("feedbackPrev");
@@ -579,7 +619,10 @@ document.addEventListener("DOMContentLoaded", () => {
       for (let i = 0; i < totalDots; i++) {
         const dot = document.createElement("button");
         dot.type = "button";
-        if (i === currentIndex) dot.classList.add("active");
+
+        if (i === currentIndex) {
+          dot.classList.add("active");
+        }
 
         dot.addEventListener("click", () => {
           currentIndex = i;
@@ -592,6 +635,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateDots() {
       const dots = feedbackDots.querySelectorAll("button");
+
       dots.forEach((dot, index) => {
         dot.classList.toggle("active", index === currentIndex);
       });
