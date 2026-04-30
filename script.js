@@ -525,7 +525,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const nome = document.getElementById("nome")?.value.trim() || "";
       const telefone = document.getElementById("telefone")?.value.trim() || "";
-      const instagram = document.getElementById("instagram")?.value.trim() || "";
       const tipo = document.getElementById("tipo-hidden")?.value.trim() || "";
       const noivos = document.getElementById("noivos")?.value.trim() || "";
       const dataEvento = document.getElementById("dataEvento")?.value.trim() || "";
@@ -564,7 +563,6 @@ document.addEventListener("DOMContentLoaded", () => {
         `Olá, Camilly! Vim pelo site e gostaria de solicitar um orçamento.\n\n` +
         `*Nome:* ${nome}\n` +
         `*Telefone:* ${telefone}\n` +
-        `*Instagram:* ${instagram || "Não informado"}\n` +
         `*Tipo de serviço:* ${tipo}\n` +
         blocoNoivos +
         `*Data do evento/gravação:* ${dataEvento || "Não informado"}\n` +
