@@ -565,7 +565,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `*Telefone:* ${telefone}\n` +
         `*Tipo de serviço:* ${tipo}\n` +
         blocoNoivos +
-        `*Data do evento/gravação:* ${dataEvento || "Não informado"}\n` +
+        `*Data e horário do evento/gravação:* ${dataEvento || "Não informado"}\n` +
         `*Cidade:* ${cidade || "Não informado"}\n` +
         `*Detalhes:* ${mensagem || "Não informado"}`;
 
